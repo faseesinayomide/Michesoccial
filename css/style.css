@@ -27,6 +27,8 @@ header {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(10px);
+          width: 100%;
+
 }
 body {
   background: radial-gradient(
@@ -34,9 +36,7 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(38, 65, 164, 0.304) 100%
   );
-  /*min-height: 100vh;*/
   margin: 0;
-  padding: 60px;
 }
 
 .menu-toggle { display: none; }
@@ -62,6 +62,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+      width: 100%;
+
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.321);
 }
 
@@ -109,7 +111,9 @@ body {
 }
 
 
-.nav-br { position: relative; } /* add to your existing .nav-br rule */
+.nav-br { position: relative; 
+        width: 100%;
+} /* add to your existing .nav-br rule */
 
 .burger {
   display: none;
@@ -130,12 +134,12 @@ body {
   height: 2px;
   background: #000;
   border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 @keyframes menuIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-8px) ; }
+  to   { opacity: 1; transform: translateY(0) ; }
 }
 
 @media (max-width: 768px) {
@@ -161,8 +165,8 @@ body {
   .start a { display: block; text-align: center; padding: 14px; }
 
   /* open state */
-  header.open .links { display: flex;  animation: menuIn 0.25s ease; }
-  header.open .start { display: block; animation: menuIn 0.25s ease; }
+  header.open .links { display: flex;  animation: menuIn 0.25s ease-in-out; }
+  header.open .start { display: block; animation: menuIn 0.25s ease-in-out; }
 
   header.open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   header.open .burger span:nth-child(2) { opacity: 0; }
@@ -353,7 +357,6 @@ section {
   justify-content: space-between;
   background: #2641a4;
   height: 100%;
-  padding: 30px;
   align-items: flex-start;
   align-content: flex-start;
 }
@@ -393,7 +396,6 @@ section {
   justify-content: space-between;
   background: #050505;
   height: 100%;
-  padding: 30px;
   align-items: flex-start;
   align-content: flex-start;
 }
@@ -568,11 +570,11 @@ padding: 20px;
 
 /* Mobile */
 @media (max-width: 480px) {
-  
+ 
 .hero {
   align-items: start;
   align-content: center;
-  padding: 0;
+  padding: 20px;
   text-align: center;
 }
 .wrap-hero h1 {
@@ -599,7 +601,7 @@ flex-direction: column;
 }
   .wrap{
     display: flex;
-
+padding: 20px;
     align-items: center;
     flex-direction: column;
     gap: 20px;
@@ -610,11 +612,14 @@ margin-bottom: 10%;
     align-items: center;
     text-align: center;
   }
+  
   .tagboard{
     justify-content: center;
   }
   .brand{
-    padding: 0;
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
   }
   .brandtxt{
     padding: 0;
@@ -630,19 +635,32 @@ margin-bottom: 10%;
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 0;
+    text-align: center;
   }
+
   .bndtxt{
     align-items:start;
     text-align: left;
+        padding: 10px 10px ;
+
   }
- 
-  .brandcrd .bndtxt-1{
-    align-items:start;
+ .bndtxt h1{
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left;
+  color: #2641a4;
+ }
+ .bndtxt-1{
+          padding: 10px 15px ;
+align-items:start;
     text-align: left;
-    height: auto;
-    padding: 0;
-  }
+ }
+ .bndtxt-1 h1{
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left;
+  
+ }
 .pro{
 
   text-align: center;
@@ -659,7 +677,8 @@ margin-bottom: 10%;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 20px;
+ padding: 40px; 
+  margin: 0 20px;
 }
 footer{
   display: flex;
