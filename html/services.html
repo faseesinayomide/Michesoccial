@@ -10,26 +10,30 @@
   </head>
 
   <body>
-    <header class="site">
-      <div class="nav-br">
-        <div class="nav">
-          <img
-            src="/imgs/404F6A69-F4B3-435A-AC07-4691EB08B016_L0_001-09_04_2026, 13_52_10.png"
-            href="/html/new.html"
-          />
-        </div>
+      <header class="site">
+  <div class="nav-br">
+    <div class="nav">
+      <a href="/html/new.html">
+        <img src="/imgs/404F6A69-F4B3-435A-AC07-4691EB08B016_L0_001-09_04_2026, 13_52_10.png" alt="Miche Social" />
+      </a>
+    </div>
 
-        <div class="links">
-          <a href="/html/index.html">Home</a>
-          <a href="/html/work.html">Work</a>
-          <a href="#process">Process</a>
-          <a href="#about">About</a>
-        </div>
-        <div class="start">
-          <a href="#">Start Project</a>
-        </div>
-      </div>
-    </header>
+    <div class="links" id="navMenu">
+      <a href="/index.html">Home</a>
+      <a href="/html/services.html">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+    </div>
+
+    <div class="start">
+      <a href="mailto:michesocial045@gmail.com">Start Project</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
     <div class="section">
       <div class="wrap" id="services">
@@ -214,5 +218,28 @@
         <p>© 2026</p>
       </div>
     </footer>
+
+      <script>
+  const header = document.querySelector("header.site");
+  const burger = document.getElementById("burger");
+
+  function setMenu(open) {
+    header.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open);
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+
+  burger.addEventListener("click", () => setMenu(!header.classList.contains("open")));
+
+  // close after tapping a link
+  document.querySelectorAll(".links a, .start a").forEach((a) =>
+    a.addEventListener("click", () => setMenu(false))
+  );
+
+  // close if the window grows back to desktop width
+  window.matchMedia("(min-width: 769px)").addEventListener("change", (e) => {
+    if (e.matches) setMenu(false);
+  });
+</script>
   </body>
 </html>

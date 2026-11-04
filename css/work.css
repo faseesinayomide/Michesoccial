@@ -36,8 +36,9 @@ header {
 
 .nav-br {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
+  padding: 20px 5%;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.321);
 }
 
@@ -68,20 +69,72 @@ header {
   transition: 0.5s ease-in-out;
 }
 
-.start a {
-  padding: 10px;
+
+
+.nav-br { position: relative; 
+        width: 100%;
+} /* add to your existing .nav-br rule */
+
+.burger {
+  display: none;
+  flex-direction: column;
   justify-content: center;
-  text-decoration: none;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  border: 1px solid black;
-  border-radius: 5px;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
 }
-.start a:hover {
-  color: white;
-  transition: 0.5s ease-in-out;
-  border: 1px solid aliceblue;
-  background-color: rgb(0, 0, 0);
+.burger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #000;
+  border-radius: 2px;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+@keyframes menuIn {
+  from { opacity: 0; transform: translateY(-8px) ; }
+  to   { opacity: 1; transform: translateY(0) ; }
+}
+
+@media (max-width: 768px) {
+  .nav-br { flex-wrap: wrap;
+  width: 100%;}
+  .nav    { order: 1; }
+  .burger { order: 2; display: flex; }
+
+  .links, .start { display: none; flex-basis: 100%; }
+
+  .links {
+    order: 3;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 8px;
+  }
+  .links a {
+    padding: 14px 10px;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .start { order: 4; padding: 12px 0 6px; }
+  .start a { display: block; text-align: center; padding: 14px; }
+
+  /* open state */
+  header.open .links { display: flex;  animation: menuIn 0.25s ease-in-out; }
+  header.open .start { display: block; animation: menuIn 0.25s ease-in-out; }
+
+  header.open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  header.open .burger span:nth-child(2) { opacity: 0; }
+  header.open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .burger span, .links, .start { transition: none; animation: none !important; }
 }
 
 .banner {
