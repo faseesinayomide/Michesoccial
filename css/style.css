@@ -500,8 +500,8 @@ footer{
   border-top: 1px solid rgba(0, 0, 0, 0.431);
   align-items: center;
   align-content: center;
-  gap: 30px;
-
+  gap: 20px;
+  padding: 5%;
 }
 .firstcont{
 padding: 30px;
@@ -550,7 +550,7 @@ padding: 20px;
   display: flex;
   justify-content: space-between;
   align-content: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .coutesy h1{
   font-size: small;
