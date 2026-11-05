@@ -20,6 +20,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px; /* anchor links won't hide under the sticky header */
+  
 }
 
 header {
@@ -178,7 +179,11 @@ body {
 }
 
 .hero {
+ max-width: 1300px;
+  margin: auto;
+  padding: 40px;
   align-items: start;
+  
   align-content: center;
 }
 .wrap-hero h1 {
@@ -263,6 +268,9 @@ transition: 0.5s ease-in-out;
 
 section {
   padding: 84px 0;
+ max-width: 1300px;
+  margin: auto;
+  padding: 40px;
 }
 
 
@@ -322,8 +330,9 @@ section {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding: 0 60px;
-}
+max-width: 1300px;
+  margin: auto;
+  padding: 40px;}
 .brandtxt {
   display: flex;
   justify-content: center;
@@ -359,7 +368,7 @@ section {
   height: 100%;
   align-items: flex-start;
   align-content: flex-start;
-}
+padding: 20px;}
 .brandcrd .bndtxt h1 {
   font-size: 6rem;
   font-weight: 700;
@@ -384,7 +393,6 @@ section {
   flex-direction: column;
   gap: 10px;
   align-items: start;
-  padding: 30px;
   text-align: left;
 }
 .bndwrds ul li {
@@ -398,6 +406,7 @@ section {
   height: 100%;
   align-items: flex-start;
   align-content: flex-start;
+  padding: 20px;
 }
 .brandcrd .bndtxt-1 h1 {
   font-family: var(--font-display);
@@ -421,9 +430,11 @@ section {
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 30px;
   flex-direction: column;
   gap: 10px;
+   max-width: 1300px;
+  margin: auto;
+  padding: 40px;
 }
 .project .pro {
   display: flex;
@@ -479,8 +490,9 @@ section {
   grid-template-columns: 1fr 1.4fr;
   gap: 40px;
   align-items: center;
-  padding: auto;
-}
+ max-width: 1300px;
+  margin: auto;
+  padding: 40px;}
 .founder h2 {
   font-family: var(--font-display);
   font-size: clamp(24px, 3vw, 32px);
@@ -496,13 +508,17 @@ section {
 }
 
 footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  align-items:start;
+  gap: 30px;
   height: 70vh;
-  border-top: 1px solid rgba(0, 0, 0, 0.431);
-  align-items: center;
-  align-content: center;
-  gap: 20px;
-  padding: 5%;
-}
+  border-top: 1px solid rgba(0, 0, 0, 0.286);
+ max-width: 1300px;
+  margin: auto;
+ }
 .firstcont{
 padding: 30px;
 }
@@ -548,9 +564,11 @@ padding: 20px;
 }
 .coutesy{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-content: center;
-  margin-top: 5%;
+  gap: 20px;
+
+  padding: 20px;  
 }
 .coutesy h1{
   font-size: small;
@@ -683,7 +701,7 @@ align-items:start;
 footer{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: space-between;
   text-align: center;
   gap: 30px;
     height: 50vh;

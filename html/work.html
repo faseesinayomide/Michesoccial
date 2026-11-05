@@ -10,28 +10,35 @@
   </head>
 
   <body>
-     <header class="site">
-  <div class="nav-br">
-    <div class="nav">
-      <a href="/html/new.html">
-        <img src="/imgs/404F6A69-F4B3-435A-AC07-4691EB08B016_L0_001-09_04_2026, 13_52_10.png" alt="Miche Social" />
-      </a>
-    </div>
+    <header class="site">
+      <div class="nav-br">
+        <div class="nav">
+          <a href="/html/new.html">
+            <img
+              src="/imgs/404F6A69-F4B3-435A-AC07-4691EB08B016_L0_001-09_04_2026, 13_52_10.png"
+              alt="Miche Social"
+            />
+          </a>
+        </div>
 
-    <div class="links" id="navMenu">
-      <a href="/index.html">Home</a>
-      <a href="/html/services.html">Services</a>
-      <a href="#process">Process</a>
-      <a href="#about">About</a>
-    </div>
+        <div class="links" id="navMenu">
+          <a href="/index.html">Home</a>
+          <a href="/html/services.html">Services</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+        </div>
 
-    
-
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
     <div class="banner">
       <h1>
@@ -146,9 +153,9 @@
           </div>
         </div>
       </div>
-       <div class="cont">
+      <div class="cont">
         <div class="cont-1">
-          <p> Kgmb Limited</p>
+          <p>Kgmb Limited</p>
           <div class="cont-1txt">
             <h1>Agriculture</h1>
             <h2>@kgmb_limited</h2>
@@ -156,7 +163,7 @@
         </div>
         <div class="cont-2">
           <p>Client account · Agriculture</p>
-          <h1> Kgmb Limited</h1>
+          <h1>Kgmb Limited</h1>
           <h2>The starting point</h2>
           <p>
             The work began with a full Instagram audit. It scored the account
@@ -187,7 +194,8 @@
       </div>
     </div>
 
-<div class="project" id="process">       <div class="pro">
+    <div class="project" id="process">
+      <div class="pro">
         <h1>Where the work happened</h1>
         <p>
           Every platform gets its own approach, not one post pasted four times.
@@ -227,7 +235,7 @@
         <div class="procont-4">
           <h1>LinkedIn</h1>
           <p>
-             Account audit, branded templates, rewritten captions and
+            Account audit, branded templates, rewritten captions and
             introductory posts. Revamp graphics, introductory posts and a login
             lockout fixed. Before-and-after revamp graphics for the account.
             Introductory posts and a full profile rewrite, from headline to
@@ -253,27 +261,31 @@
       </div>
     </footer>
 
-      <script>
-  const header = document.querySelector("header.site");
-  const burger = document.getElementById("burger");
+    <script>
+      const header = document.querySelector("header.site");
+      const burger = document.getElementById("burger");
 
-  function setMenu(open) {
-    header.classList.toggle("open", open);
-    burger.setAttribute("aria-expanded", open);
-    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  }
+      function setMenu(open) {
+        header.classList.toggle("open", open);
+        burger.setAttribute("aria-expanded", open);
+        burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
 
-  burger.addEventListener("click", () => setMenu(!header.classList.contains("open")));
+      burger.addEventListener("click", () =>
+        setMenu(!header.classList.contains("open")),
+      );
 
-  // close after tapping a link
-  document.querySelectorAll(".links a, .start a").forEach((a) =>
-    a.addEventListener("click", () => setMenu(false))
-  );
+      // close after tapping a link
+      document
+        .querySelectorAll(".links a, .start a")
+        .forEach((a) => a.addEventListener("click", () => setMenu(false)));
 
-  // close if the window grows back to desktop width
-  window.matchMedia("(min-width: 769px)").addEventListener("change", (e) => {
-    if (e.matches) setMenu(false);
-  });
-</script>
+      // close if the window grows back to desktop width
+      window
+        .matchMedia("(min-width: 769px)")
+        .addEventListener("change", (e) => {
+          if (e.matches) setMenu(false);
+        });
+    </script>
   </body>
 </html>

@@ -23,7 +23,6 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(38, 65, 164, 0.304) 100%
   );
-
 }
 header {
   position: sticky;
@@ -33,10 +32,9 @@ header {
   backdrop-filter: blur(10px);
 }
 
-
 .nav-br {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.321);
@@ -69,10 +67,9 @@ header {
   transition: 0.5s ease-in-out;
 }
 
-
-
-.nav-br { position: relative; 
-        width: 100%;
+.nav-br {
+  position: relative;
+  width: 100%;
 } /* add to your existing .nav-br rule */
 
 .burger {
@@ -94,21 +91,40 @@ header {
   height: 2px;
   background: #000;
   border-radius: 2px;
-  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition:
+    transform 0.25s ease-in-out,
+    opacity 0.25s ease-in-out;
 }
 
 @keyframes menuIn {
-  from { opacity: 0; transform: translateY(-8px) ; }
-  to   { opacity: 1; transform: translateY(0) ; }
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
-  .nav-br { flex-wrap: wrap;
-  width: 100%;}
-  .nav    { order: 1; }
-  .burger { order: 2; display: flex; }
+  .nav-br {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .nav {
+    order: 1;
+  }
+  .burger {
+    order: 2;
+    display: flex;
+  }
 
-  .links, .start { display: none; flex-basis: 100%; }
+  .links,
+  .start {
+    display: none;
+    flex-basis: 100%;
+  }
 
   .links {
     order: 3;
@@ -121,20 +137,44 @@ header {
     font-size: 1.05rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .start { order: 4; padding: 12px 0 6px; }
-  .start a { display: block; text-align: center; padding: 14px; }
+  .start {
+    order: 4;
+    padding: 12px 0 6px;
+  }
+  .start a {
+    display: block;
+    text-align: center;
+    padding: 14px;
+  }
 
   /* open state */
-  header.open .links { display: flex;  animation: menuIn 0.25s ease-in-out; }
-  header.open .start { display: block; animation: menuIn 0.25s ease-in-out; }
+  header.open .links {
+    display: flex;
+    animation: menuIn 0.25s ease-in-out;
+  }
+  header.open .start {
+    display: block;
+    animation: menuIn 0.25s ease-in-out;
+  }
 
-  header.open .burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  header.open .burger span:nth-child(2) { opacity: 0; }
-  header.open .burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  header.open .burger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  header.open .burger span:nth-child(2) {
+    opacity: 0;
+  }
+  header.open .burger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .burger span, .links, .start { transition: none; animation: none !important; }
+  .burger span,
+  .links,
+  .start {
+    transition: none;
+    animation: none !important;
+  }
 }
 
 .banner {
@@ -145,6 +185,8 @@ header {
   text-align: left;
   /*margin: 20px 5%;*/
   gap: 20px;
+  max-width: 1300px;
+  margin: auto;
   padding: 40px;
   height: 60vh;
   border-bottom: 1px solid rgba(0, 0, 0, 0.251);
@@ -191,11 +233,11 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 50px;
-  /*  height: 100vh;
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px; /*  height: 100vh;
 background-color: #2641a4;*/
   border-bottom: 1px solid rgba(0, 0, 0, 0.251);
-
 }
 .cont {
   width: 100%; /* stops the card shrinking to its text */
@@ -240,7 +282,6 @@ background-color: #2641a4;*/
   font-size: 1.2rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.699);
-
 }
 .cont-2 {
   display: flex;
@@ -301,7 +342,7 @@ background-color: #2641a4;*/
   border-radius: 30px;
 }
 .cont-1x1 {
-   display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
@@ -314,17 +355,18 @@ background-color: #2641a4;*/
   border-radius: 15px 0 0 15px;
 }
 
-
 .project {
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 30px;
+  max-width: 1300px;
+  margin: auto;
+  padding: 40px;
   flex-direction: column;
   gap: 10px;
 }
 .project .pro {
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(0, 0, 0);
@@ -347,18 +389,16 @@ background-color: #2641a4;*/
   align-items: center;
   gap: 20px;
 }
-.procont p{
+.procont p {
   color: #00000076;
 }
 .procont-1 {
   border-top: 3px solid #2641a4;
 }
 .procont-2 {
-
   border-top: 3px solid rgb(0, 0, 0);
 }
 .procont-3 {
-  
   border-top: 3px solid rgb(158, 157, 157);
 }
 .procont-4 {
