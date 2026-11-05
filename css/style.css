@@ -19,7 +19,6 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px; /* anchor links won't hide under the sticky header */
   
 }
 
