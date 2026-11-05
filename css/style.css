@@ -18,27 +18,27 @@
   
 }
 html {
-  scroll-behavior: smooth;
-    min-height: 100%;
+  background: #bcc3e0;  
+  scroll-behavior: smooth; /* the BOTTOM color of your gradient */
+}
 
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: linear-gradient(#c5c9e4, #bcc3e0);   /* your existing gradient */
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 40;
+  width: 100%;
+  padding-top: env(safe-area-inset-top);   /* fills the status bar area */
+  background: transparent;         /* gives the blur something solid, no feathered edges */
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-          width: 100%;
+}
 
-}
-body {
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(38, 65, 164, 0.304) 100%
-  );
-  margin: 0;
-}
 
 .menu-toggle { display: none; }
 .burger {
@@ -507,7 +507,7 @@ padding: 20px;}
 
 }
 
-footer{
+/*footer{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -520,7 +520,20 @@ footer{
   margin: auto;
   padding-bottom: calc(24px + env(safe-area-inset-bottom));
 
- }
+ }*/
+ footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  gap: 30px;
+  min-height: 70dvh;                       /* was height: 70vh */
+  max-width: 1300px;
+  margin: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.286);
+  padding: 24px 16px calc(24px + env(safe-area-inset-bottom));
+}
 .firstcont{
 padding: 30px;
 }
