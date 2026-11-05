@@ -293,7 +293,6 @@ header {
   width: 100%;
   align-items: start;
   border-top: 1px solid rgba(0, 0, 0, 0.191);
-  padding: 30px;
 }
 
 .tag-1 {
@@ -466,17 +465,18 @@ header {
     text-align: center;
   }
   .casetags {
-    grid-template-columns: 1fr;
-    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     justify-content: center;
     text-align: center;
     align-items: center;
     border-top: none;
-    padding: 20px;
+    padding: 40px 0;
   }
   .tag-1 {
     width: 100%;
-    padding: 20px;
+    padding: 20px ;
   }
   .tag-1 h1 {
     align-items: center;
@@ -505,4 +505,5 @@ header {
   #lst1 {
     border-radius: 20px;
   }
+
 }
