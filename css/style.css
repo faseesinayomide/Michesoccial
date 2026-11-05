@@ -19,7 +19,8 @@
 }
 html {
   scroll-behavior: smooth;
-   
+     backdrop-filter: blur(10px);
+
   background: #bcc3e08d;   /* the BOTTOM color of your gradient */
 }
 
