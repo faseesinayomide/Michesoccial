@@ -18,27 +18,31 @@
   
 }
 html {
-  background: transparent;  
-  scroll-behavior: smooth; /* the BOTTOM color of your gradient */
-}
-
-body {
-  margin: 0;
-  min-height: 100dvh;
-  background: linear-gradient(#c5c9e4, #bcc3e0);   /* your existing gradient */
+  scroll-behavior: smooth;
+    min-height: 100%;
+backdrop-filter: blur(10px);
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 40;
-  width: 100%;
-  padding-top: env(safe-area-inset-top);   /* fills the status bar area */
-  background: transparent;         /* gives the blur something solid, no feathered edges */
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-}
+          width: 100%;
+  padding-top: env(safe-area-inset-top);   /* fills the status bar area */
 
+}
+body {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(38, 65, 164, 0.304) 100%
+
+  );
+   
+
+  margin: 0;
+  min-height: 100dvh;}
 
 .menu-toggle { display: none; }
 .burger {
@@ -506,22 +510,7 @@ padding: 20px;}
   color:rgba(253, 253, 253, 0.477);
 
 }
-
-/*footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  align-items:start;
-  gap: 30px;
-  height: 70vh;
-  border-top: 1px solid rgba(0, 0, 0, 0.286);
- max-width: 1300px;
-  margin: auto;
-  padding-bottom: calc(24px + env(safe-area-inset-bottom));
-
- }*/
- footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
