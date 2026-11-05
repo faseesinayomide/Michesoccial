@@ -19,31 +19,33 @@
 }
 html {
   scroll-behavior: smooth;
-    min-height: 100%;
-backdrop-filter: blur(10px);
+   
+  background: #bcc3e08d;   /* the BOTTOM color of your gradient */
 }
+
 
 header {
   position: sticky;
   top: 0;
   z-index: 40;
-  backdrop-filter: blur(10px);
-          width: 100%;
+  width: 100%;
   padding-top: env(safe-area-inset-top);   /* fills the status bar area */
-
+  background: transparent;         /* gives the blur something solid, no feathered edges */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
+
+
 body {
+  margin: 0;
+  min-height: 100dvh;
   background: radial-gradient(
     circle,
     rgba(255, 255, 255, 1) 0%,
-    rgba(38, 65, 164, 0.304) 100%
+    rgba(38, 65, 164, 0.265) 100%
 
-  );
-   
-
-  margin: 0;
-  min-height: 100dvh;}
-
+  );      /* your existing gradient */
+}
 .menu-toggle { display: none; }
 .burger {
   display: none;
